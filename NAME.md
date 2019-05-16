@@ -27,11 +27,14 @@ properly, one must take the following steps:
   4. Take that nummber of bytes from the front of the full destination.
   5. Convert back to a base64 representation using i2p's base64 character set.
 
-A number of applications exist to perform these steps for you. Here are some of
-them:
+A number of applications and scripts exist to perform these steps for you. Here
+are some of them:
 
-  * []()
-  * [my application for converting keys](https://github.com/eyedeekay/keyto64)
+  * [the i2p.scripts collection of scripts(Mostly java and bash)](https://github.com/i2p/i2p.scripts)
+  * [my application for converting keys(Go)](https://github.com/eyedeekay/keyto)
+
+These capabilities are also available in a number of I2P application development
+libraries.
 
 #### Shortcut:
 
@@ -43,4 +46,10 @@ that easily, run this command when running I2P-Bote with I2P on Debian:
 
 Or, if I2P is installed as your user:
 
-        head -c 516 i2pbote/local_dest.key
+        head -c 516 ~/.i2p/i2pbote/local_dest.key
+
+### Methon B: Do a lookup
+
+If that seems like a bit too much work, it's possible for you to look up the
+base64 destination of your Bote connection by querying it's base32 address using
+any of the available means for looking up a base32 address.
