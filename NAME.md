@@ -28,7 +28,7 @@ properly, one must take the following steps:
   5. Convert back to a base64 representation using i2p's base64 character set.
 
 A number of applications and scripts exist to perform these steps for you. Here
-are some of them:
+are some of them, but this is far from exhaustive:
 
   * [the i2p.scripts collection of scripts(Mostly java and bash)](https://github.com/i2p/i2p.scripts)
   * [my application for converting keys(Go)](https://github.com/eyedeekay/keyto)
