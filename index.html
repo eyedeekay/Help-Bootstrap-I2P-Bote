@@ -33,19 +33,25 @@
 <li>Take that nummber of bytes from the front of the full destination.</li>
 <li>Convert back to a base64 representation using i2p's base64 character set.</li>
 </ol>
-<p>A number of applications exist to perform these steps for you. Here are some of them:</p>
+<p>A number of applications and scripts exist to perform these steps for you. Here are some of them:</p>
 <ul>
-<li><a href=""></a></li>
-<li><a href="https://github.com/eyedeekay/keyto64">my application for converting keys</a></li>
+<li><a href="https://github.com/i2p/i2p.scripts">the i2p.scripts collection of scripts(Mostly java and bash)</a></li>
+<li><a href="https://github.com/eyedeekay/keyto">my application for converting keys(Go)</a></li>
 </ul>
+<p>These capabilities are also available in a number of I2P application development libraries.</p>
 <h4 id="shortcut">Shortcut:</h4>
 <p>Since the local destination of your bote node is a DSA destination, then it's quicker to just truncate the local_dest.key file to the first 516 bytes. To do that easily, run this command when running I2P-Bote with I2P on Debian:</p>
 <pre><code>    sudo -u i2psvc head -c 516 /var/lib/i2p/i2p-config/i2pbote/local_dest.key
 </code></pre>
 <p>Or, if I2P is installed as your user:</p>
-<pre><code>    head -c 516 i2pbote/local_dest.key
+<pre><code>    head -c 516 ~/.i2p/i2pbote/local_dest.key
 </code></pre>
+<h3 id="methon-b-do-a-lookup">Methon B: Do a lookup</h3>
+<p>If that seems like a bit too much work, it's possible for you to look up the base64 destination of your Bote connection by querying it's base32 address using any of the available means for looking up a base32 address.</p>
 <h1 id="step-three-contact-us">Step Three: Contact Us!</h1>
-<h3></h3>
-<h5 id="is-this-centralization">is this... centralization?</h5>
-<p>Not if you get involved! In the past, the bootstrap nodes have all been run by people who are involved in the development of I2P-bote, but over time that number has dwindled and as a result, so has the number and availability of bootstrap nodes. Right now, the process is unfortunately centralized around a couple of people. You can help fix that, by running an I2P-Bote bootstrap node as a service to other users of the network.</p>
+<h3 id="update-the-built-in-peerstxt-file-with-your-new-node">Update the built-in-peers.txt file with your new node</h3>
+<p>Now that you've got the correct destination for your I2P-Bote node, the final step is to add yourself to the default peers list for <a href="https://github.com/i2p/i2p.i2p-bote/tree/master/core/src/main/resources/i2p/bote/network">I2P-Bote here</a> here. You can do this by forking the repository, adding yourself to the list with your name commented out, and your 516-char destination directly below it, like this:</p>
+<pre><code>    # idk
+    QuabT3H5ljZyd-PXCQjvDzdfCec-2yv8E9i6N71I5WHAtSEZgazQMReYNhPWakqOEj8BbpRvnarpHqbQjoT6yJ5UObKv2hA2M4XrroJmydPV9CLJUCqgCqFfpG-bkSo0gEhB-GRCUaugcAgHxddmxmAsJVRj3UeABLPHLYiakVz3CG2iBMHLJpnC6H3g8TJivtqabPYOxmZGCI-P~R-s4vwN2st1lJyKDl~u7OG6M6Y~gNbIzIYeQyNggvnANL3t6cUqS4v0Vb~t~CCtXgfhuK5SK65Rtkt2Aid3s7mrR2hDxK3SIxmAsHpnQ6MA~z0Nus-VVcNYcbHUBNpOcTeKlncXsuFj8vZL3ssnepmr2DCB25091t9B6r5~681xGEeqeIwuMHDeyoXIP0mhEcy3aEB1jcchLBRLMs6NtFKPlioxz0~Vs13VaNNP~78bTjFje5ya20ahWlO0Md~x5P5lWLIKDgaqwNdIrijtZAcILn1h18tmABYauYZQtYGyLTOXAAAA
+</code></pre>
+<p>and submitting a pull request. That's all there is to it so help keep i2p alive, decentralized, and reliable.</p>
