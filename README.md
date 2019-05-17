@@ -34,6 +34,7 @@ of bote.i2p:
  3. Click Install Plugin.
  4. Once installed, click SecureMail in the routerconsole sidebar or homepage, or go to http://127.0.0.1:7657/i2pbote/
 
+
 Step Two: Get your I2P-Bote node's base64 address
 -------------------------------------------------
 
