@@ -88,7 +88,9 @@ Or, if I2P is installed as your user:
 
 If that seems like a bit too much work, it's possible for you to look up the
 base64 destination of your Bote connection by querying it's base32 address using
-any of the available means for looking up a base32 address.
+any of the available means for looking up a base32 address. The base32 address
+of your Bote node is available on the "Connection" page under the bote plugin
+application, at [127.0.0.1:7657/i2pbote/network](http://127.0.0.1:7657/i2pbote/network)
 
 Step Three: Contact Us!
 =======================
