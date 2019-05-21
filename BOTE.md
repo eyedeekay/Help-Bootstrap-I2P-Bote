@@ -3,7 +3,7 @@ How to volunteer by helping I2P-Bote bootstrap
 ==============================================
 
 An easy way to help people message eachother privately is to run an I2P-Bote
-peer which can be used by new bote to bootstrap their own I2P-Bote peers.
+peer which can be used by new bote users to bootstrap their own I2P-Bote peers.
 Unfortunately, until now, the process of setting up an I2P-Bote bootstrap peer
 has been much more obscure than it should be. It's actually extremely simple!
 
